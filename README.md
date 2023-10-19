@@ -1,5 +1,5 @@
 # 修改   
-以汉化   
+已汉化   
 
 
 # luci-app-modemband
