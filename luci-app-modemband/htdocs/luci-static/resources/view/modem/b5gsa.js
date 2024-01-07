@@ -9,7 +9,7 @@
 'require tools.widgets as widgets';
 
 /*
-	Copyright 2022-2023 Rafał Wabik - IceG - From eko.one.pl forum
+	Copyright 2022-2024 Rafał Wabik - IceG - From eko.one.pl forum
 */
 
 
@@ -250,7 +250,7 @@ return view.extend({
 				modemen += 'n' + numb + '  ';
 				modemen = modemen.replace('undefined', '');
 		}
-		modemen = modemen.trim();
+		modemen = modemen.includes('n0') == true ? modemen = _('Bands are disabled...') : modemen = modemen.trim();
 
 		for (var i = 0; i < json.supported5gsa.length; i++) 
 		{
@@ -278,7 +278,7 @@ return view.extend({
 				view.innerHTML  = '';
   				view.innerHTML  = renderHTML.trim();
 				}
-
+				view.innerHTML = view.innerHTML.includes('n0') == true ? view.innerHTML = _('Bands are disabled...') : view.innerHTML  = renderHTML.trim();
 				}
 				else {
 				var view = document.getElementById("modemlteb");
